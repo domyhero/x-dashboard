@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>豌豆荚运营仪表板</title>
+
+  <!-- The javascript and css are managed by sprockets. The files can be found in the /assets folder-->
+  <script type="text/javascript" src="/assets/application.js"></script>
+  <link rel="stylesheet" href="/assets/application.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="icon" href="/assets/images/favicon.ico">
+  <script type="text/javascript">
+  if ( window.screen.availWidth >= 1920){
+    console.log('1920!');
+    $(function() {
+      console.log('1920!');
+      // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+      Dashing.widget_base_dimensions = [370, 340]
+      Dashing.numColumns = 5
+    });
+  }
+  </script>
+<style type="text/css">
+  .widget-list li label{
+    max-width: 50%;
+  }
+  .widget-comments .comment-container{
+    display: block;
+  }
+  .widget-comments .comment-container h3 img {
+    height: 50px;
+  }
+  .widget-comments .comment-container .comment {
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  .widget-image img{
+    height: 290px;
+    width: 320px;
+  }
+</style>
+</head>
+  <body>
+    <div id="container">
+      <div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="welcome" data-view="Text" data-title="欢迎" data-text="这是为OPS定制的DASHBOARD" data-moreinfo="PS: 以后会加各种widget!"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="synergy" data-view="Meter" data-title="论坛在线人数" data-min="0" data-max="100"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="synergy" data-view="Number" data-title="论坛发帖量"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="synergy" data-view="Number" data-title="TODO - 其他指标"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="synergy" data-view="Number" data-title="TODO - 用户赞美"></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="clock" data-view="Clock" data-title="Clock"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Image" data-id='wdjdoll'></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Image" data-id="randomcat"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+      <div data-id="buzzwords" data-view="List" data-unordered="true" data-title="关键词" data-moreinfo="Absolute ranking of pony preferences"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="zhihu_topic" data-view="List" data-unordered="true" data-title="知乎问题" data-moreinfo="Absolute ranking of pony preferences" style="background-color: #0d7dcb; color: #eee;"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="comments" data-view="Comments" data-title="Comments" data-moreinfo="更多"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="website_up" data-view="Text" data-title="豌豆荚论坛"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="convergence" data-view="Graph" data-title="论坛流量" style="background-color:green"></div>
+    </li>
+  </ul>
+    </div>
+  </body>
+</html>
